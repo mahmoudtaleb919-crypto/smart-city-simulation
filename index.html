@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Smart City Simulation</title>
-</head>
-<body>
-    <h1>Smart City Simulation</h1>
-    <p>Project initialized from GitHub</p>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Smart City Simulator</title>
+        <link rel="stylesheet" href="Css/style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>🏙️Smart City Simulator</h1>
+        </header>
+        <main>
+            <section id="dashboard">
+                <div class="card">👥Population:
+                    <span id="population">0</span>
+                </div>
+                <div class="card">😊Satisfaction:
+                    <span id="satisfaction">0</span>%
+                </div>
+                <div class="card">🚗Traffic:
+                    <span id="traffic">0</span>%
+                </div>
+                <div class="card">🌫️Pollution:
+                    <span id="pollution">0</span>%
+                </div>
+                <div class="card">💰Money: $
+                    <span id="money">0</span>
+                </div>
+                <div class="card">🏆Score:
+                    <span id="score">0</span>
+                </div>
+            </section>
+            <section id="city-map">
+               <div class="zone residential">🏠</div>
+               <div class="zone industrial">🏭</div>
+               <div class="zone park">🌳</div>
+               <div class="zone commercial">🏢</div>
+
+               <div class="zone residential">🏠</div>
+               <div class="zone park">🌳</div>
+               <div class="zone industrial">🏭</div>
+               <div class="zone residential">🏠</div>
+            </section>
+            <section id="controls">
+                <button id="add-people">➕ Add People</button>
+                <button id="toggle-traffic">🚦Toglle Traffic Lights</button>
+                <button id="next-turn">⏭️Next Turn</button>
+                <select id="zone-type">
+                    <option value="residential">🏠Residential</option>
+                    <option value="park">🌳 Park</option>
+                    <option value="commercial">🏢Commercial</option>
+                </select>
+                <button id="build-zone">🏗️Build Zone</button>
+                <button id="remove-zone">🗑️Remove Last Zone</button>
+            </section>
+            <section id="settings">
+                   <h2>⚙️ City Settings</h2>
+
+                   <label>
+                          Tax Rate (%):
+                          <input type="range" id="tax-rate" min="0" max="30" value="10">
+                          <span id="tax-value">10%</span>
+                   </label>
+
+                  <br><br>
+
+                  <label>
+                         <input type="checkbox" id="traffic-service" checked>
+                          Enable Traffic Lights Service
+                 </label>
+           </section>
+        </main>
+        <script src="Js/data.js"></script>
+        <script src="Js/city.js"></script>
+        <script src="Js/ui.js"></script>
+    </body>
 </html>
